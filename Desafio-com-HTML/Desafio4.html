@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Vogais e Consoantes</title>
+</head>
+<body>
+    <h1>Escolha um arquivo para análise</h1>
+
+    <input type="file" id="fileInput">
+    <button onclick="processarArquivo()">Processar Arquivo</button>
+
+    <h3>Resultado:</h3>
+    <p id="resultado"></p>
+
+    <script>
+        function contarLetras(linha) {
+            let vogais = 0;
+            let consoantes = 0;
+
+            for (let letra of linha.toLowerCase()) {
+                if ('aeiou'.includes(letra)) {
+                    vogais++;
+                }
+                else if (letra >= 'a' && letra <= 'z') {
+                    consoantes++;
+                }
+            }
+            return { vogais, consoantes };
+        }
+
+        function processarArquivo() {
+            const fileInput = document.getElementById("fileInput");
+            const file = fileInput.files[0];
+
+            if (!file) {
+                alert("Por favor, selecione um arquivo!");
+                return;
+            }
+
+            const reader = new FileReader();
+
+            reader.onload = function(e) {
+                const data = e.target.result;
+                const linhas = data.split(/\r?\n/)
+
+                let maxVogais = -1, maxConsoantes = -1;
+                let linhaComMaisVogais = ''
+                let linhaComMaisConsoantes = ''
+
+                for (let linha of linhas) {
+                    const { vogais, consoantes } = contarLetras(linha);
+
+                    if (vogais > maxVogais) {
+                        maxVogais = vogais;
+                        linhaComMaisVogais = linha;
+                    }
+
+                    if (consoantes > maxConsoantes) {
+                        maxConsoantes = consoantes;
+                        linhaComMaisConsoantes = linha;
+                    }
+                }
+
+                const resultado = `
+                    Linha com mais vogais: ${linhaComMaisVogais} <br>
+                    Linha com mais consoantes: ${linhaComMaisConsoantes}
+                `;
+                document.getElementById("resultado").innerHTML = resultado;
+            };
+
+            reader.readAsText(file);
+        }
+    </script>
+</body>
+</html>
+
