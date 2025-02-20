@@ -1,5 +1,11 @@
 # Desafio Tasken
 
+#### questões de 1 a 4 estão na pasta "questoesScript" (feitos em JavaScript)
+#### questões de 5 a 8 estão na pasta "questoesSQL" (feitos em SQLServer)
+#### questões 3 e 4 feitos com HTML estão na pasta "Desafio-com-HTML" (feitos em HTML e JavaScript)
+
+#
+
 #### Feito em JavaScript
 1 - Escreva uma função que receba um valor inteiro como parâmetro de entrada e imprima na tela n linhas conforme estrutura apresentada abaixo. Por exemplo, as seguintes linhas devem ser apresentadas ser o parâmetro de entrada for 10.
 
