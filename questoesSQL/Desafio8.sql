@@ -2,4 +2,4 @@
 --  ‘santos’.
 
 DELETE FROM clientes
-WHERE nome LIKE '% santos';
+WHERE nome LIKE '%santos%';

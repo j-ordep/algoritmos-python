@@ -29,7 +29,7 @@
                 return;
             } else if (numero === 0) {
                 if (numeros.length > 0) {
-                    relatorio()
+                    exibirRelatorio()
                 } else {
                     alert("Você não digitou nenhum número.");
                 }
@@ -60,9 +60,6 @@
         }
 
         function mediaDosNumeros() {
-            if (numeros.length === 0) {
-                return 0
-            }
 
             let soma = 0;
             for (const numero of numeros) {
@@ -95,7 +92,7 @@
             return ocorrencias
         }
 
-        function relatorio() {
+        function exibirRelatorio() {
             const quantidade = quantidadeDeNumeros()
             const maior = maiorNumero()
             const media = mediaDosNumeros()

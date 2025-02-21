@@ -21,7 +21,7 @@ function adicionarNumero() {
         return;
     } else if (numero === 0) {
         if (numeros.length > 0) {
-            relatorio()
+            exibirRelatorio()
         } else {
             alert("Você não digitou nenhum número.");
         }
@@ -44,17 +44,14 @@ function maiorNumero() {
             
     let maior = numeros[0]
     for (let i = 1; i < numeros.length; i++) {
-                if (numeros[i] > maior) {
-            maior = numeros[i]
+            if (numeros[i] > maior) {
+                maior = numeros[i]
         }
     }
     return maior
 }
 
 function mediaDosNumeros() {
-    if (numeros.length === 0) {
-        return 0
-    }
 
     let soma = 0;
     for (const numero of numeros) {
@@ -80,6 +77,7 @@ function menorNumeroImpar() {
 function quantidadeDeOcorrencias() {
 
     const ocorrencias = {}
+
     for (let i = 0; i < numeros.length; i++) {
         const num = numeros[i]
         ocorrencias[num] = (ocorrencias[num] || 0 ) + 1
@@ -87,7 +85,7 @@ function quantidadeDeOcorrencias() {
     return ocorrencias
 }
 
-function relatorio() {
+function exibirRelatorio() {
     const quantidade = quantidadeDeNumeros()
     const maior = maiorNumero()
     const media = mediaDosNumeros()
