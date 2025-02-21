@@ -13,7 +13,7 @@ CREATE TABLE clientes(
 
 CREATE TABLE telefones(
     cpf_cliente CHAR(11),
-    ddd CHAR(2),
+    ddd CHAR(3),
     telefone CHAR(9),
     PRIMARY KEY (cpf_cliente),
     FOREIGN KEY (cpf_cliente) REFERENCES clientes(cpf)
