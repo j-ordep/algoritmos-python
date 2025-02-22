@@ -61,7 +61,7 @@ e) A quantidade de vezes que cada número ocorreu. Exemplo: "O número 7 ocorreu
 
 ### Questões de SQL:
 
-#### Sintaxe SQLServer
+#### Sintaxe SQLServer (container Docker) 
 
 5 - Escreva o script necessário para a criação de uma tabela chamada CLIENTES e outra chamada TELEFONES. A tabela CLIENTES deverá possuir os seguintes campos: NOME, CPF e IDADE sendo o CPF a chave primária.A tabela TELEFONES deverá possuir três campos, sendo eles: CPF_CLIENTE, DDD e TELEFONE, para esta tabela o campo CPF_CLIENTE deverá ser a chave primária e estrangeira (referenciando o campo CPF da tabela CLIENTES)
 
