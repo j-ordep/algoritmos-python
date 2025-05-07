@@ -1,4 +1,4 @@
-# Desafio Tasken
+# Desafio Algoritmos
 
 #### questões de 1 a 4 estão na pasta "questoesScript" (feitos em JavaScript)
 #### questões de 5 a 8 estão na pasta "questoesSQL" (feitos em SQLServer)
